@@ -5,5 +5,5 @@ console.log('');
 for (let i = 0; i < itemsInCategories.length; i += 1) {
     console.log('Category: ', itemsInCategories[i].querySelector('h2').textContent);
     console.log('Elements: ', itemsInCategories[i].querySelectorAll('li').length);
-    if (i !== itemsInCategories.length - 1) console.log('') ;
+    if (i !== itemsInCategories.length - 1) console.log('');
 };
