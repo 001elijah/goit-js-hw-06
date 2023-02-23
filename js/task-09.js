@@ -2,17 +2,18 @@ const body = document.body;
 
 const button = document.querySelector('button.change-color');
 
+const output = document.querySelector('span.color');//вивів у змінну
+
+let randomColor = '';
+
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function spanColorCode() {
-  document.querySelector('span.color').textContent = body.style.backgroundColor;
-}
-
-function applyRandomColor(event) {
-  body.style.backgroundColor = `${getRandomHexColor()}`;
-  spanColorCode();
+function applyRandomColor() {
+  getRandomHexColor();
+  body.style.backgroundColor = randomColor;
+  output.textContent = randomColor;
 }
 
 button.addEventListener('click', applyRandomColor);
